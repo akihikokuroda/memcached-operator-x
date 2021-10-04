@@ -1,0 +1,24 @@
+# permissions for end users to edit memcachedxes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: memcachedx-editor-role
+rules:
+- apiGroups:
+  - cache.akihikokuroda
+  resources:
+  - memcachedxes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.akihikokuroda
+  resources:
+  - memcachedxes/status
+  verbs:
+  - get

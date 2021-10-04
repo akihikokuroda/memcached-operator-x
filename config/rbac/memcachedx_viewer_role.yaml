@@ -1,0 +1,20 @@
+# permissions for end users to view memcachedxes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: memcachedx-viewer-role
+rules:
+- apiGroups:
+  - cache.akihikokuroda
+  resources:
+  - memcachedxes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cache.akihikokuroda
+  resources:
+  - memcachedxes/status
+  verbs:
+  - get

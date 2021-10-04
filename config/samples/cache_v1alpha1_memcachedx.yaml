@@ -1,0 +1,7 @@
+apiVersion: cache.akihikokuroda/v1alpha1
+kind: Memcachedx
+metadata:
+  name: memcachedx-sample
+spec:
+  # Add fields here
+  foo: bar
